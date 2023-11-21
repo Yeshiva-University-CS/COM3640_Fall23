@@ -5,7 +5,8 @@ import java.io.IOException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import edu.yu.com3640.Impl.RgbPixelDataTextFile;
+import edu.yu.com3640.Impl.ImageFactory;
+import edu.yu.com3640.Impl.RgbTextPixelDataLoader;
 
 public class App {
     private static final Logger logger = LogManager.getLogger(App.class);
@@ -21,7 +22,7 @@ public class App {
         String filePath = args[0];
         logger.info("File path: " + filePath);
 
-        PixelDataLoader loader = new RgbPixelDataTextFile(filePath);
+        PixelDataLoader loader = new RgbTextPixelDataLoader(filePath);
         Image image = ImageFactory.create24BitBMPImage(loader);
         logger.info("Image Width: " + image.getWidth());
         logger.info("Image Height: " + image.getHeight());

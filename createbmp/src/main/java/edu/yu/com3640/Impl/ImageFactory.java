@@ -1,4 +1,7 @@
-package edu.yu.com3640;
+package edu.yu.com3640.Impl;
+
+import edu.yu.com3640.Image;
+import edu.yu.com3640.PixelDataLoader;
 
 public class ImageFactory {
 

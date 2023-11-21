@@ -9,7 +9,7 @@
   <version>1.0</version>
   <packaging>jar</packaging>
   
-  <name>stock-ticker</name>
+  <name>create-bmp</name>
   <url>http://maven.apache.org</url>
 
   <properties>

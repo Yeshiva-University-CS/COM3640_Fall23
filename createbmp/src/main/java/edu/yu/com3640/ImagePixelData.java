@@ -1,13 +1,38 @@
 package edu.yu.com3640;
 
-public interface ImagePixelData {
-    void addRow(Pixel[] row);
-    
-    int rows();
+import java.util.ArrayList;
 
-    int cols();
+public class ImagePixelData {
 
-    Pixel getPixel(int row, int col);
+    public final int columns;
+    public final ArrayList<Pixel[]> pixelData;
 
-    void setPixel(int row, int col, Pixel pixel);
+    public ImagePixelData(int columns) {
+        this.columns = columns;
+        this.pixelData = new ArrayList<>();
+    }
+
+    public void addRow(Pixel[] row) {
+        if (row.length != this.columns) {
+            throw new IllegalArgumentException("Row length must match number of columns");
+        }
+        this.pixelData.add(row);
+    }
+
+    public int rows() {
+        return this.pixelData.size();
+    }
+
+    public int cols() {
+        return this.columns;
+    }
+
+    public Pixel getPixel(int row, int col) {
+        return this.pixelData.get(row)[col];
+    }
+
+    public void setPixel(int row, int col, Pixel pixel) {
+        this.pixelData.get(row)[col] = pixel;
+    }
+
 }
