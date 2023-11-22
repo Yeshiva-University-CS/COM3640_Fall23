@@ -9,11 +9,11 @@ import edu.yu.com3640.Pixel;
  * This class is responsible for mapping a given color to the closest color in a
  * fixed palette of 256 colors.
  */
-public class ColorMapper {
+public class ColorMapperSampleCode {
 
     private final List<Pixel> palette;
 
-    public ColorMapper() {
+    public ColorMapperSampleCode() {
         this.palette = generateFixedPalette();
     }
 
